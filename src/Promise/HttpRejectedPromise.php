@@ -8,14 +8,14 @@ use Http\Promise\Promise;
 final class HttpRejectedPromise implements Promise
 {
     /**
-     * @var \Exception
+     * @var Exception
      */
     private $exception;
 
     /**
-     * @param \Exception $exception
+     * @param Exception $exception
      */
-    public function __construct(\Exception $exception)
+    public function __construct(Exception $exception)
     {
         $this->exception = $exception;
     }
