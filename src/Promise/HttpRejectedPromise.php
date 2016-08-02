@@ -3,9 +3,8 @@
 namespace Http\Client\Promise;
 
 use Http\Client\Exception;
-use Http\Promise\Promise;
 
-final class HttpRejectedPromise implements Promise
+final class HttpRejectedPromise implements HttpPromise
 {
     /**
      * @var Exception
@@ -41,7 +40,7 @@ final class HttpRejectedPromise implements Promise
      */
     public function getState()
     {
-        return Promise::REJECTED;
+        return HttpPromise::REJECTED;
     }
 
     /**

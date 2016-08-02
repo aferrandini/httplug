@@ -2,7 +2,7 @@
 
 namespace Http\Client;
 
-use Http\Promise\Promise;
+use Http\Client\Promise\HttpPromise;
 use Psr\Http\Message\RequestInterface;
 
 /**
@@ -19,7 +19,7 @@ interface HttpAsyncClient
      *
      * @param RequestInterface $request
      *
-     * @return Promise Resolves a PSR-7 Response or fails with an Http\Client\Exception.
+     * @return HttpPromise Promise Resolves a PSR-7 Response or fails with an Http\Client\Exception.
      *
      * @throws \Exception If processing the request is impossible (eg. bad configuration).
      */

@@ -3,10 +3,9 @@
 namespace Http\Client\Promise;
 
 use Http\Client\Exception;
-use Http\Promise\Promise;
 use Psr\Http\Message\ResponseInterface;
 
-final class HttpFulfilledPromise implements Promise
+final class HttpFulfilledPromise implements HttpPromise
 {
     /**
      * @var ResponseInterface
@@ -42,7 +41,7 @@ final class HttpFulfilledPromise implements Promise
      */
     public function getState()
     {
-        return Promise::FULFILLED;
+        return HttpPromise::FULFILLED;
     }
 
     /**
